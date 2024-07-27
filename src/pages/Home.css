@@ -1,0 +1,19 @@
+/* Set the background to a sunrise gradient */
+.my-toolbar{
+    --background: transparent;
+    background-image: linear-gradient(90deg, rgba(241, 90, 41, 1) 0%, rgba(255, 149, 0, 1) 50%, rgba(241, 90, 41, 1) 100%);
+}
+
+/* Use fonts in grayscale */
+h2 {
+    font-family: Arial, sans-serif;
+    color: #272626;
+}
+
+ion-alert.custom-alert {
+    --background: rgba(60, 65, 64, 0.975);
+}
+
+.cardconteudo {
+    --background: rgba(255,255,255,0.2);
+}
