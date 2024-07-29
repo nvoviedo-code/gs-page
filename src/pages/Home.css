@@ -7,7 +7,12 @@
 /* Use fonts in grayscale */
 h2 {
     font-family: Arial, sans-serif;
-    color: #272626;
+    color: #3a3838;
+}
+
+h6 {
+    font-family: Arial, sans-serif;
+    color: #302e2ebe;
 }
 
 ion-alert.custom-alert {

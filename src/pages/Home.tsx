@@ -9,9 +9,10 @@ import { IonButton, IonCard, IonCardContent, IonCardHeader,
 import './Home.css';
 
 const card_info_list = [
-  {title: 'Spa y Estética', subtitle: '✼ Masajes Relajantes ✼ Fisioterapia Postoperatoria Estética ✼ ...', img: 'assets/img/6168337.jpg', text: 'Tratamiento especializado para la recuperación de lesiones musculares y articulares.'},
-  {title: 'Neuro-Rehabilitación', subtitle: '✼ .. ✼ ...', img: 'assets/img/15880.jpg', text: 'Este tipo de terapia se centra en ayudar a las personas a mejorar su movimiento, equilibrio, amplitud de movimiento, fuerza, coordinación y postura. También proporciona educación y formación para ayudar a las personas a comprender mejor su enfermedad y adaptarse a su nueva normalidad.'},
-  {title: 'Rehabilitación y Corrección Postural', subtitle: '✼ .. ✼ ...', img: 'assets/img/11198.jpg', text: 'Tratamiento enfocado en la corrección de problemas posturales y prevención de lesiones musculares.'}
+  {title: 'Spa y Estética', subtitle: 'Masajes Relajantes ✼ Fisioterapia Postoperatoria Estética ✼ Drenaje Linfático ✼ Reflexología ✼', img: 'assets/img/6168337.jpg',
+    text: 'El fisioterapeuta estético se encarga de recuperar la elasticidad y firmeza de los tejidos mediante técnicas terapéuticas que producen relajación de la musculatura, reducción de la fatiga muscular, regulación de la tonicidad de la musculatura y alivio del dolor, logrando además un impacto positivo en la salud en geneal y a nivel emocional.'},
+  {title: 'Neuro-Rehabilitación', subtitle: 'Rehabilitación motriz ✼ ...', img: 'assets/img/15880.jpg', text: 'Este tipo de terapia se centra en ayudar a las personas a mejorar su movimiento, equilibrio, amplitud de movimiento, fuerza, coordinación y postura. También proporciona educación y formación para ayudar a las personas a comprender mejor su enfermedad y adaptarse a su nueva normalidad.'},
+  {title: 'Rehabilitación y Corrección Postural', subtitle: 'Rehabilitación estructural ✼ ...', img: 'assets/img/11198.jpg', text: 'Tratamiento enfocado en la corrección de problemas posturales y prevención de lesiones musculares.'}
 ];
 
 const Home: React.FC = () => {
@@ -28,12 +29,12 @@ const Home: React.FC = () => {
               trigger="contact"
               header="Lic. Gabriela Soledad López"
               subHeader="Fisioterapeuta y Kinesióloga"
-              message={new IonicSafeString(`<img src="assets/icons/location-outline.svg" width="22px" height="22px"> Calandria 548. Torre 6 Dpto 9. Córdoba, Argentina.<br>
-                <br><img src="assets/icons/logo-whatsapp.svg" width="20px" height="20px"> (+54) 351-3046800.`)}
+              message={new IonicSafeString(`<br><img src="assets/icons/logo-whatsapp-green.svg" width="28px" height="28px" margin="20px"/> (+54) 351-3046800 <a href="https://wa.me/549351046800">Chat on WhatsApp</a>
+                <br><br><img src="assets/icons/location-outline-red.svg" width="30px" height="30px"> Calandria 548. Torre 6 Dpto 9. Córdoba, Argentina.<br>
+                <br><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13624.11366267814!2d-64.2573771!3d-31.38578!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329fbf8860df51%3A0xf8986c40cae67dea!2sGabriela%20Soledad%20L%C3%B3pez!5e0!3m2!1ses!2sar!4v1722281244853!5m2!1ses!2sar" width="300px" height="225px" style="border:0; margin: 0 auto; display: block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                `)}
               // <ion-icon name="logo-instagram"></ion-icon>""
-              // `&lt;a aria-label=&quot;Chat on WhatsApp&quot; href=&quot;https://wa.me/549351046800&quot;&gt;
-              // &lt;img alt=&quot;Chat on WhatsApp&quot; src=&quot;assets/icons/WhatsAppButtonGreenLarge.svg&quot; style={{ width: &quot;90%&quot; }}/&gt;
-              // &lt;/a&gt;`
+              // <img alt="Chat on WhatsApp" src="assets/icons/WhatsAppButtonGreenLarge.svg" style={{ width: "90%" }}/>
               buttons={['Close']}
               ></IonAlert>
               <IonButton color={'warning'} fill='outline'>Turnos</IonButton>
@@ -49,17 +50,15 @@ const Home: React.FC = () => {
       <IonContent fullscreen className='ion-padding'>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
         </div>
-        <IonToolbar className='cardconteudo'>
-          <IonTitle color={'light'}>Servicios Ofrecidos</IonTitle>
-        </IonToolbar>
+        <IonTitle color={'tertiary'}><h3>Nuestros Servicios</h3></IonTitle>
         <IonGrid>
           <IonRow>
           {card_info_list.map((card_info) => (
             <IonCol>
               <IonCard className="cardconteudo">
                 <IonCardHeader>
-                  <IonCardTitle color={'light'}>{card_info.title}</IonCardTitle>
-                  <IonCardSubtitle>{card_info.subtitle}</IonCardSubtitle>
+                  <IonCardTitle color={'tertiary'}>{card_info.title}</IonCardTitle>
+                  <IonCardSubtitle><h6>{card_info.subtitle}</h6></IonCardSubtitle>
                 </IonCardHeader>
                 <IonCardContent>
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -68,7 +67,7 @@ const Home: React.FC = () => {
                   <IonText class='ion-text-wrap'>
                     <h2>{card_info.text}</h2>
                   </IonText>
-                  <IonButton>+ Info</IonButton>
+                  <IonButton fill='clear'>+ Info</IonButton>
                 </IonCardContent>
               </IonCard>
               </IonCol>
