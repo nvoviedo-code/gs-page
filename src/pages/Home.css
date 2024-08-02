@@ -1,24 +1,24 @@
 /* Set the background to a sunrise gradient */
-.my-toolbar{
+ion-toolbar{
     --background: transparent;
-    background-image: linear-gradient(90deg, rgba(241, 90, 41, 1) 0%, rgba(255, 149, 0, 1) 50%, rgba(241, 90, 41, 1) 100%);
+    background-image: linear-gradient(90deg,#622569 0%, #f9d5e5 50%, rgb(64, 206, 151) 100%);
+    
 }
 
+ion-item {
+    --background: #fffaf0;
+}
+  
 /* Use fonts in grayscale */
 h2 {
     font-family: Arial, sans-serif;
-    color: #3a3838;
 }
 
 h6 {
     font-family: Arial, sans-serif;
-    color: #302e2ebe;
-}
-
-ion-alert.custom-alert {
-    --background: rgba(60, 65, 64, 0.975);
 }
 
 .cardconteudo {
-    --background: rgba(255,255,255,0.2);
+    font-family: Arial, sans-serif;
+    background: #d0e7ddc0;
 }
