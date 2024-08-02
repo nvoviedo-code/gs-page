@@ -1,0 +1,6 @@
+# Ignore the following files and directories
+.git
+.vscode
+node_modules
+cypress
+cypress.config.json
